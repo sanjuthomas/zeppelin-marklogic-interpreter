@@ -31,6 +31,4 @@ public class MarkLogicReader implements Reader{
 	public void close(){
 		this.client.release();
 	}
-  
-
 }
