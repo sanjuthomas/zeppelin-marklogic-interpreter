@@ -7,6 +7,7 @@ package org.sanju.zeppelin.marklogic.interpreter.reader;
  */
 public interface Reader {
   
-  
+	String query(String query);
+	void close();
 
 }
