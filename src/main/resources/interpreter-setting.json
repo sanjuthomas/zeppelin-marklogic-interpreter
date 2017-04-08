@@ -1,14 +1,14 @@
 [
   {
-    "group": "org.sanju",
+    "group": "marklogic",
     "name": "zeppelin-marklogic-interpreter",
     "className": "org.sanju.zeppelin.marklogic.interpreter.MarkLogicInterpreter",
     "properties": {
       "properties1": {
         "ml.host": localhost,
         "ml.port": "8000",
-        "username": "admin",
-        "password": "admin"
+        "ml.username": "admin",
+        "ml.password": "admin"
       }
     },
     "editor": {
