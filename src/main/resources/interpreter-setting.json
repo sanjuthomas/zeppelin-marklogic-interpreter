@@ -1,14 +1,32 @@
 [
   {
     "group": "marklogic",
-    "name": "zeppelin-marklogic-interpreter",
+    "name": "marklogic",
     "className": "org.sanju.zeppelin.marklogic.interpreter.MarkLogicInterpreter",
     "properties": {
-      "properties1": {
-        "ml.host": localhost,
-        "ml.port": "8000",
-        "ml.username": "admin",
-        "ml.password": "admin"
+      "ml.host": {
+        "envName": "MARKLOGIC_HOST",
+        "propertyName": "ml.host",
+        "defaultValue": "localhost",
+        "description": "The host for MarkLogic"
+      },
+      "ml.port": {
+        "envName": "MARKLOGIC_PORT",
+        "propertyName": "ml.port",
+        "defaultValue": "8000",
+        "description": "The port for MarkLogic"
+      },
+      "ml.username": {
+        "envName": "MARKLOGIC_USERNAME",
+        "propertyName": "ml.username",
+        "defaultValue": "admin",
+        "description": "The default MarkLogic username"
+      },
+      "ml.password": {
+        "envName": "MARKLOGIC_PASSWORD",
+        "propertyName": "ml.password",
+        "defaultValue": "admin",
+        "description": "The default MarkLogic password"
       }
     },
     "editor": {
