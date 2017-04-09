@@ -28,7 +28,7 @@ jsearch.facets([ jsearch.facet('RDBMS', 'RDBMS') ]).result()
 ```
 A range index for JSON element 'RDBMS' expected for the above query.
 
-## Screenshot
+## Zeppelin MarkLogic Notebook Screenshot
 
 ![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter.png)
 
