@@ -61,16 +61,12 @@ public class MarkLogicInterpreter extends Interpreter {
 			if(null != result){
 				final JsonNode facets = result.get("facets");
 				if(null != facets){
-					
 					final Map<String, Object> facetsMap = MAPPER.convertValue(facets, Map.class);
 					facetsMap.keySet().forEach(facetName -> {
-						b.append(facetName);
-						b.append("\t");
-						b.append("count\n");
-						Map<String, Object> facetValues = (Map<String, Object>) facetsMap.get(facetName);
+						b.append(facetName); b.append("\t"); b.append("count\n");
+						final Map<String, Object> facetValues = (Map<String, Object>) facetsMap.get(facetName);
 						facetValues.forEach( (k, v) -> {b.append(k);b.append("\t");b.append(v);b.append("\n");});
 					});
-					
 				}
 			}
 			return new InterpreterResult(InterpreterResult.Code.SUCCESS, InterpreterResult.Type.TABLE, b.toString());
