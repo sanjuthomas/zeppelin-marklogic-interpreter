@@ -30,7 +30,7 @@ A range index for JSON element 'RDBMS'is expected for the above query.
 
 ## Zeppelin MarkLogic Notebook Screenshot
 
-![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter.png)
+![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter-1.png)
 
 ## Questions?
 Please create an issue in GitHub.
