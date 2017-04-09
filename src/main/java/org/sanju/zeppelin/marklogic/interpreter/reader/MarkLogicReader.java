@@ -1,5 +1,6 @@
 package org.sanju.zeppelin.marklogic.interpreter.reader;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.DatabaseClientFactory;
 import com.marklogic.client.DatabaseClientFactory.Authentication;
@@ -22,10 +23,10 @@ public class MarkLogicReader implements Reader{
 	/**
 	 * @param query jsearch query as string
 	 */
-	public String query(String query) {
+	public JsonNode query(String query) {
 		
 		final ServerEvaluationCall evalCall = client.newServerEval().javascript(query);
-		return evalCall.evalAs(String.class);
+		return evalCall.evalAs(JsonNode.class);
 	}
 	
 	public void close(){

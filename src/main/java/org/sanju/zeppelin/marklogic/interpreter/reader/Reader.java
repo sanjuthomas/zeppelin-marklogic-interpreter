@@ -1,5 +1,7 @@
 package org.sanju.zeppelin.marklogic.interpreter.reader;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
 /**
  * 
  * @author Sanju Thomas
@@ -7,6 +9,7 @@ package org.sanju.zeppelin.marklogic.interpreter.reader;
  */
 public interface Reader {
   
-	String query(String query);
+	JsonNode query(String query);
 	void close();
+
 }
