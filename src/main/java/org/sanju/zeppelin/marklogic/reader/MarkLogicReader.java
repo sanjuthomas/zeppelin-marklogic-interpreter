@@ -1,4 +1,4 @@
-package org.sanju.zeppelin.marklogic.interpreter.reader;
+package org.sanju.zeppelin.marklogic.reader;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.marklogic.client.DatabaseClient;
