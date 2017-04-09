@@ -12,7 +12,27 @@ To execute exploratory queries against MarkLogic and visualize the result in the
 
 ![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter-arch.png)
 
+## What is currently supported?
+MarkLogic [JSearch](https://docs.marklogic.com/js/jsearch) aggregation/facet queries only. I'm in the process of adding the entire JSarch query support. Please stay tuned.
+
+Sample documents - 
+```
+{
+"RDBMS": "MYSQL"
+}
+```
+Example query - 
+```
+var jsearch = require('/MarkLogic/jsearch.sjs');
+jsearch.facets([ jsearch.facet('RDBMS', 'RDBMS') ]).result()
+```
+A range index for JSON element 'RDBMS' expected for the above query.
+
 ## Screenshot
 
 ![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter.png)
+
+## Questions?
+Please create an issue in GitHub.
+
 
