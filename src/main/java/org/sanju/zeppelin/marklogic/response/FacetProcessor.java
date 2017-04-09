@@ -19,15 +19,12 @@ public class FacetProcessor implements Processor {
     if (null != result) {
       final JsonNode facets = result.get("facets");
       if (null != facets) {
+        b.append("Facet Name\t");
+        b.append("Facet Value\t");
+        b.append("count\n");
         final Map<String, Object> facetsMap = MAPPER.convertValue(facets, Map.class);
-        facetsMap
-        .keySet()
-        .parallelStream()
-        .forEach(
+        facetsMap.keySet().forEach(
             facetName -> {
-              b.append("Facet Name\t");
-              b.append("Facet Value\t");
-              b.append("count\n");
               final Map<String, Object> facetValues = (Map<String, Object>) facetsMap.get(facetName);
               facetValues.forEach((k, v) -> {
                 b.append(facetName);
