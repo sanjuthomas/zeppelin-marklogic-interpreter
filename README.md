@@ -23,10 +23,9 @@ Sample documents -
 ```
 Example query - 
 ```
-var jsearch = require('/MarkLogic/jsearch.sjs');
 jsearch.facets([ jsearch.facet('RDBMS', 'RDBMS') ]).result()
 ```
-A range index for JSON element 'RDBMS'is expected for the above query.
+A range index for JSON element 'RDBMS'is expected for the above query. Variable jsearch will be available in the context by default. No need to import '/MarkLogic/jsearch.sjs'.
 
 ## Zeppelin MarkLogic Notebook Screenshot
 
