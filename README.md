@@ -13,7 +13,7 @@ To execute exploratory queries against MarkLogic and visualize the result in the
 ![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter-arch.png)
 
 ## What is currently supported?
-MarkLogic [JSearch](https://docs.marklogic.com/js/jsearch) aggregation/facet queries only. I'm in the process of adding the entire JSarch query support. Please stay tuned.
+MarkLogic [JSearch](https://docs.marklogic.com/js/jsearch) aggregation/facet, documents and collection queries. I'm in the process of adding the entire JSarch query support. Please stay tuned.
 
 Sample documents - 
 ```
@@ -24,6 +24,10 @@ Sample documents -
 Example query - 
 ```
 jsearch.facets([ jsearch.facet('RDBMS', 'RDBMS') ]).result()
+
+jsearch.documents().where(jsearch.byExample({symbol: 'AAPL'})).result().results
+
+fn.collection('trades').toArray()
 ```
 A range index for JSON element 'RDBMS'is expected for the above query. Variable jsearch will be available in the context by default. No need to import '/MarkLogic/jsearch.sjs'.
 
