@@ -12,7 +12,8 @@ import org.sanju.zeppelin.marklogic.response.Processor;
 public enum Command {
   
     COLLECTION ("fn.collection", CollectionProcessor.class),
-    FACETS ("jsearch.facets", FacetProcessor.class);
+    JSEARCH_FACETS ("jsearch.facets", FacetProcessor.class),
+    JSEARCH_DOCUMENTS("jsearch.documents", CollectionProcessor.class);
     
     private String command;
     private Class<? extends Processor> processor;
@@ -34,8 +35,10 @@ public enum Command {
       
       if(query.startsWith(COLLECTION.getCommand())){
         return COLLECTION;
-      }else if(query.startsWith(FACETS.getCommand())){
-        return FACETS;
+      }else if(query.startsWith(JSEARCH_FACETS.getCommand())){
+        return JSEARCH_FACETS;
+      }else if(query.startsWith(JSEARCH_DOCUMENTS.getCommand())){
+        return JSEARCH_DOCUMENTS;
       }
       throw new IllegalArgumentException("Unknown command: "+query);
     }
