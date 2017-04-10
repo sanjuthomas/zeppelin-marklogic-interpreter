@@ -15,7 +15,7 @@ To execute exploratory queries against MarkLogic and visualize the result in the
 ## What is currently supported?
 MarkLogic [JSearch](https://docs.marklogic.com/js/jsearch) aggregation/facet, documents and collection queries. I'm in the process of adding the entire JSarch query support. Please stay tuned.
 
-Example query - 
+### Example Queries  
 ```
 jsearch.facets([ jsearch.facet('RDBMS', 'RDBMS') ]).result()
 
