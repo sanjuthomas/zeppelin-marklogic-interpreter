@@ -1,6 +1,7 @@
 package org.sanju.zeppelin.marklogic.interpreter;
 
 import org.sanju.zeppelin.marklogic.response.CollectionProcessor;
+import org.sanju.zeppelin.marklogic.response.DefaultProcessor;
 import org.sanju.zeppelin.marklogic.response.FacetProcessor;
 import org.sanju.zeppelin.marklogic.response.Processor;
 
@@ -12,7 +13,8 @@ import org.sanju.zeppelin.marklogic.response.Processor;
 public enum Command {
   
     COLLECTION ("fn.collection", CollectionProcessor.class),
-    JSEARCH_FACETS ("jsearch.facets", FacetProcessor.class);
+    JSEARCH_FACETS ("jsearch.facets", FacetProcessor.class),
+    DEFAULT("default", DefaultProcessor.class);
     
     private String command;
     private Class<? extends Processor> processor;
@@ -37,7 +39,7 @@ public enum Command {
       }else if(query.startsWith(JSEARCH_FACETS.getCommand())){
         return JSEARCH_FACETS;
       }else{
-        return COLLECTION;
+        return DEFAULT;
       }
     }
     
