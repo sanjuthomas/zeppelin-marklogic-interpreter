@@ -54,6 +54,8 @@ Above four steps would install the Zeppelin MarkLogic Interpreter.
 ## Zeppelin MarkLogic Notebook Screenshot
 
 ![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter-1.png)
+
+## Zeppelin and MarkLogic in action - Video.
 [Video](https://youtu.be/ynLRGrRwirc)
 
 ## Questions?
