@@ -25,9 +25,36 @@ fn.collection('trades').toArray()
 ```
 A range index for JSON element 'RDBMS'is expected for the above query. Variable jsearch will be available in the context by default. No need to import '/MarkLogic/jsearch.sjs'.
 
+## How to install Zeppelin interpreter for MarkLogic?
+
+1. Download the latest release from [release folder](https://github.com/sanjuthomas/zeppelin-marklogic-interpreter/tree/master/release). 
+2. Unzip the content into zeppelin_home/interpreter. Edit the zeppelin_home/conf/zeppelin-site.xml file
+3. Add "org.sanju.zeppelin.marklogic.interpreter.MarkLogicInterpreter" into the zeppelin.interpreters property value. 
+4. Restart Zeppelin.
+
+Above four steps would install the Zeppelin MarkLogic Interpreter. 
+
+## How to create MarkLogic interpreter in Zepplin?
+
+1. Go to Zeppelin home page. (http://host:8080)
+2. Click on the username on the right top corner, click on the interpreter. 
+3. Click on the Create button on the interpreters page.
+4. Select marklogic interpreter group.
+5. Given an interpreter name.
+6. Leave the connection details as is, or change as per your environment.
+7. Save the interpreter.
+
+## How to create a notebook?
+
+1. Click Notebook menu, click Create new note.
+2. Select MarkLogic interpreter.
+3. Give a name for the notebook. And you are ready to go.
+
+
 ## Zeppelin MarkLogic Notebook Screenshot
 
 ![Apache Zeppelin interpreter for MarkLogic](zepplin-with-ml-interperter-1.png)
+[Video](https://youtu.be/ynLRGrRwirc)
 
 ## Questions?
 Please create an issue in GitHub.
