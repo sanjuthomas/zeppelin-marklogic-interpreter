@@ -33,7 +33,7 @@ A range index for JSON element 'RDBMS'is expected for the above query. Variable 
 4. Add "org.sanju.zeppelin.marklogic.interpreter.MarkLogicInterpreter" into the zeppelin.interpreters property value. 
 5. Restart Zeppelin.
 
-Above four steps would install the Zeppelin MarkLogic Interpreter. 
+Above five steps would install the Zeppelin MarkLogic Interpreter. 
 
 ## How to create MarkLogic interpreter in Zepplin?
 
